@@ -21,6 +21,7 @@ require_relative "servicetrade/resources/region"
 require_relative "servicetrade/resources/company"
 require_relative "servicetrade/resources/contact"
 require_relative "servicetrade/resources/external_id"
+require_relative "servicetrade/resources/service_request"
 
 require "net/http"
 require "json"

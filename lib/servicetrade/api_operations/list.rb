@@ -55,6 +55,8 @@ module ServiceTrade
                    'companies'
                  when 'contact'
                    'contacts'
+                 when 'servicerequest'
+                   'serviceRequests'
                  else
                    'data'
                  end
