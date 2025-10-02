@@ -56,11 +56,13 @@ module ServiceTrade
                  when 'contact'
                    'contacts'
                  when 'servicerequest'
-                   'serviceRequests'
+                   'servicerequests'
+                 when 'serviceline'
+                   'servicelines'
                  else
                    'data'
                  end
-      
+
       items = response.dig('data', data_key) || response['data'] || []
       @data = items.map { |item| resource_class.new(item) }
       @total_count = response.dig('data', 'total') || response['total'] || items.length
