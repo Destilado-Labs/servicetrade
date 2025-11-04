@@ -4,9 +4,9 @@ module ServiceTrade
     extend ServiceTrade::ApiOperations::List
     extend ServiceTrade::ApiOperations::Update
     extend ServiceTrade::ApiOperations::Delete
-    
-    OBJECT_NAME = 'appointments'
-    
+
+    OBJECT_NAME = 'appointment'
+
     def self.resource_url
       OBJECT_NAME
     end
