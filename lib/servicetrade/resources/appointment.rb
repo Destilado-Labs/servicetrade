@@ -61,7 +61,7 @@ module ServiceTrade
 
     # Convenience methods for common appointment filtering
     def self.by_job(job_id, page: 1, per_page: 100)
-      list({job_id: job_id}, page: page, per_page: per_page)
+      list({jobId: job_id}, page: page, per_page: per_page)
     end
 
     def self.by_status(status, page: 1, per_page: 100)
@@ -69,19 +69,19 @@ module ServiceTrade
     end
 
     def self.by_vendor(vendor_id, page: 1, per_page: 100)
-      list({vendor_id: vendor_id}, page: page, per_page: per_page)
+      list({vendorId: vendor_id}, page: page, per_page: per_page)
     end
 
     def self.by_customer(customer_id, page: 1, per_page: 100)
-      list({customer_id: customer_id}, page: page, per_page: per_page)
+      list({customerId: customer_id}, page: page, per_page: per_page)
     end
 
     def self.by_location(location_id, page: 1, per_page: 100)
-      list({location_id: location_id}, page: page, per_page: per_page)
+      list({locationId: location_id}, page: page, per_page: per_page)
     end
 
     def self.scheduled_between(start_date, end_date, page: 1, per_page: 100)
-      list({scheduled_date_begin: start_date, scheduled_date_end: end_date}, page: page, per_page: per_page)
+      list({windowBeginsAfter: start_date, windowEndsBefore: end_date}, page: page, per_page: per_page)
     end
   end
 end

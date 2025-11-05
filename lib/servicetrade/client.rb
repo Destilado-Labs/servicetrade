@@ -9,6 +9,11 @@ module ServiceTrade
     def request(method, path, params = {}, headers = {}, skip_auth: false)
       uri = URI.parse("#{api_base}/#{path}")
 
+      # Add query parameters for GET requests BEFORE creating the request
+      if method == :get && !params.empty?
+        uri.query = URI.encode_www_form(params)
+      end
+
       # Set up the request
       klass = case method
       when :get
@@ -33,11 +38,9 @@ module ServiceTrade
       end
       headers.each { |key, value| request[key] = value }
 
-      # Add parameters
+      # Add parameters for POST/PUT requests
       if [:post, :put].include?(method)
         request.body = params.to_json
-      elsif method == :get && !params.empty?
-        uri.query = URI.encode_www_form(params)
       end
 
       # Make the request
