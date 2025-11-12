@@ -59,6 +59,8 @@ module ServiceTrade
                    'servicerequests'
                  when 'serviceline'
                    'servicelines'
+                 when 'webhook'
+                   'webhooks'
                  else
                    'data'
                  end
