@@ -61,6 +61,10 @@ module ServiceTrade
                    'servicelines'
                  when 'webhook'
                    'webhooks'
+                 when 'libitem'
+                   'libItems'
+                 when 'jobitem'
+                   'jobItems'
                  else
                    'data'
                  end

@@ -24,6 +24,8 @@ require_relative "servicetrade/resources/external_id"
 require_relative "servicetrade/resources/service_request"
 require_relative "servicetrade/resources/service_line"
 require_relative "servicetrade/resources/webhook"
+require_relative "servicetrade/resources/lib_item"
+require_relative "servicetrade/resources/job_item"
 
 require "net/http"
 require "json"
