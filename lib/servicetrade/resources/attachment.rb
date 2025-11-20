@@ -6,7 +6,7 @@ module ServiceTrade
 
     # Core attachment attributes
     attr_reader :id, :uri, :name, :description, :content_type, :size,
-                :created, :updated, :category, :purpose, :url
+                :created, :updated, :category, :purpose, :url, :content_url
 
     # Related objects
     attr_reader :job, :location, :uploaded_by
