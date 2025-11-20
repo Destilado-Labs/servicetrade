@@ -5,7 +5,7 @@ module ServiceTrade
     OBJECT_NAME = 'attachment'.freeze
 
     # Core attachment attributes
-    attr_reader :id, :uri, :name, :description, :content_type, :size,
+    attr_reader :id, :uri, :name, :description, :file_type, :size,
                 :created, :updated, :category, :purpose, :url, :content_url
 
     # Related objects
