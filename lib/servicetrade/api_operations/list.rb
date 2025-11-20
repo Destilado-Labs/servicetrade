@@ -65,6 +65,8 @@ module ServiceTrade
                    'libItems'
                  when 'jobitem'
                    'jobItems'
+                 when 'attachment'
+                   'attachments'
                  else
                    'data'
                  end

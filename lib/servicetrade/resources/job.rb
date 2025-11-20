@@ -85,6 +85,11 @@ module ServiceTrade
       response['data']
     end
 
+    # Get attachments for this job
+    def attachments(page: 1, per_page: 100)
+      ServiceTrade::Attachment.for_job(id, page: page, per_page: per_page)
+    end
+
     # Convenience methods for common job filtering
     def self.by_status(status, page: 1, per_page: 100)
       list({status: status}, page: page, per_page: per_page)
