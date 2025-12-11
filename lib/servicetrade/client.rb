@@ -6,7 +6,7 @@ module ServiceTrade
       @api_base = ServiceTrade.api_base
     end
 
-    def request(method, path, params = {}, headers = {}, skip_auth: false)
+    def request(method, path, params = {}, headers = {}, **options)
       uri = URI.parse("#{api_base}/#{path}")
 
       # Add query parameters for GET requests BEFORE creating the request
@@ -33,7 +33,7 @@ module ServiceTrade
       # Add headers
       request['Content-Type'] = 'application/json'
       request['Accept'] = 'application/json'
-      unless skip_auth
+      unless options[:skip_auth]
         add_authentication_header(request)
       end
       headers.each { |key, value| request[key] = value }

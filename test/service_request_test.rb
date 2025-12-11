@@ -155,8 +155,7 @@ class ServiceRequestTest < Test::Unit::TestCase
   end
 
   def test_list_service_requests_by_job
-    stub_request(:get, "https://api.servicetrade.com/api/servicerequest")
-      .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
+    stub_request(:get, "https://api.servicetrade.com/api/servicerequest?job_id=123&page=1&per_page=100")
       .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
       .to_return(
         status: 200,
@@ -169,8 +168,7 @@ class ServiceRequestTest < Test::Unit::TestCase
   end
 
   def test_list_service_requests_by_location
-    stub_request(:get, "https://api.servicetrade.com/api/servicerequest")
-      .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
+    stub_request(:get, "https://api.servicetrade.com/api/servicerequest?location_id=789&page=1&per_page=100")
       .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
       .to_return(
         status: 200,
@@ -183,8 +181,7 @@ class ServiceRequestTest < Test::Unit::TestCase
   end
 
   def test_list_service_requests_by_status
-    stub_request(:get, "https://api.servicetrade.com/api/servicerequest")
-      .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
+    stub_request(:get, "https://api.servicetrade.com/api/servicerequest?page=1&per_page=100&status=open")
       .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
       .to_return(
         status: 200,
@@ -197,8 +194,7 @@ class ServiceRequestTest < Test::Unit::TestCase
   end
 
   def test_list_service_requests_by_appointment
-    stub_request(:get, "https://api.servicetrade.com/api/servicerequest")
-      .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
+    stub_request(:get, "https://api.servicetrade.com/api/servicerequest?appointment_id=321&page=1&per_page=100")
       .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
       .to_return(
         status: 200,
@@ -211,8 +207,7 @@ class ServiceRequestTest < Test::Unit::TestCase
   end
 
   def test_list_service_requests_by_service_line_array
-    stub_request(:get, "https://api.servicetrade.com/api/servicerequest")
-      .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
+    stub_request(:get, "https://api.servicetrade.com/api/servicerequest?page=1&per_page=100&service_line_ids=1,2,3")
       .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
       .to_return(
         status: 200,
@@ -225,8 +220,7 @@ class ServiceRequestTest < Test::Unit::TestCase
   end
 
   def test_list_service_requests_by_asset
-    stub_request(:get, "https://api.servicetrade.com/api/servicerequest")
-      .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
+    stub_request(:get, "https://api.servicetrade.com/api/servicerequest?asset_id=987&page=1&per_page=100")
       .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
       .to_return(
         status: 200,
@@ -239,8 +233,7 @@ class ServiceRequestTest < Test::Unit::TestCase
   end
 
   def test_convenience_status_methods
-    stub_request(:get, "https://api.servicetrade.com/api/servicerequest")
-      .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
+    stub_request(:get, "https://api.servicetrade.com/api/servicerequest?page=1&per_page=100&status=open")
       .with(headers: { 'Cookie' => 'PHPSESSID=test_session_123' })
       .to_return(
         status: 200,

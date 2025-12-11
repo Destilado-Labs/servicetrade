@@ -220,7 +220,7 @@ class AuthTest < Test::Unit::TestCase
     end
 
     # Mock a simple API call to verify cookie
-    stub_request(:get, "https://api.servicetrade.com/api/job")
+    stub_request(:get, "https://api.servicetrade.com/api/job?page=1&per_page=100&status=scheduled")
       .with(headers: {'Cookie' => 'PHPSESSID=test_token_header'})
       .to_return(
         status: 200,
@@ -241,7 +241,7 @@ class AuthTest < Test::Unit::TestCase
     end
 
     # Mock a simple API call to verify session cookie is used
-    stub_request(:get, "https://api.servicetrade.com/api/job")
+    stub_request(:get, "https://api.servicetrade.com/api/job?page=1&per_page=100&status=scheduled")
       .with(headers: {'Cookie' => 'PHPSESSID=test_token_123'})
       .to_return(
         status: 200,

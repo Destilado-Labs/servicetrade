@@ -27,6 +27,7 @@ require_relative "servicetrade/resources/webhook"
 require_relative "servicetrade/resources/lib_item"
 require_relative "servicetrade/resources/job_item"
 require_relative "servicetrade/resources/attachment"
+require_relative "servicetrade/resources/comment"
 
 require "net/http"
 require "json"

@@ -67,6 +67,8 @@ module ServiceTrade
                    'jobItems'
                  when 'attachment'
                    'attachments'
+                 when 'comment'
+                   'comments'
                  else
                    'data'
                  end
