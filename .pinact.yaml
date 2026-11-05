@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/pinact/refs/heads/main/json-schema/pinact.json
+# Allow-list: org-owned reusable workflows may stay on the floating v1 tag
+# until Bryce tightens Destilado-Labs/github-workflows callers.
+version: 3
+files:
+  - pattern: .github/workflows/*.yml
+  - pattern: .github/workflows/*.yaml
+
+ignore_actions:
+  - name: Destilado-Labs/github-workflows/.*
+    ref: v1
