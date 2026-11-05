@@ -1,0 +1,12 @@
+name: Actions pin lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  pin-lint:
+    uses: Destilado-Labs/github-workflows/.github/workflows/actions-pin-lint.yml@v1
